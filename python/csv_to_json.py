@@ -14,13 +14,8 @@ def getHeader(CSV):
 
     keys = rowToArray(headerline)
 
-        # append each character into a string
-        # until tab
-
-    print(keys)
-    return keys
     f.close()
-
+    return keys
 
 def rowToArray(row):
     dataArray = []
@@ -37,23 +32,52 @@ def rowToArray(row):
             tempword += character
 
     return dataArray
-    
-
 
 # def formatJSON(datarow):
+def createJSON():
+    f=open(CSV, "r")
+    
+    finalJSON = []
+    f1 = f.readlines()
+    # headerline = f1[0]
+
+    for line in f1:
+        # print(line)
+        finalJSON.append(addDatarowToJSON(line, getHeader(CSV), {}))
+
+    # print(finalJSON)
+
+    f.close()
+
+    
+    # # Open the CSV  
+    # f = open(CSV, 'rU')  
+    # # Change each fieldname to the appropriate field name. I know, so difficult.  
+    # reader = csv.DictReader( f, getHeader(CSV))  
+    # # Parse the CSV into JSON  
+    # out = json.dumps( [ row for row in reader ] )  
+    # print("JSON parsed!") 
+    # # Save the JSON  
+    f = open( 'output.json', 'w')  
+    out = json.dumps(finalJSON)  
+    f.write(out)  
+    # print(out)
+    f.close()
+# # print("JSON saved!")
+
+def addDatarowToJSON(datarow, keys, jsonfile):
+    # print(datarow, keys)
+    dataArray = rowToArray(datarow)
+
+    # simple check, ensure data array and keys are equal size
+    if len(dataArray) == len(keys):
+        for x in range(len(dataArray)):
+            jsonfile[keys[x]] = dataArray[x]
+
+    # print(jsonfile)
+    return jsonfile
 
 
-# Open the CSV  
-f = open(CSV, 'rU')  
-# Change each fieldname to the appropriate field name. I know, so difficult.  
-reader = csv.DictReader( f, getHeader(CSV))  
-# Parse the CSV into JSON  
-out = json.dumps( [ row for row in reader ] )  
-print("JSON parsed!") 
-# Save the JSON  
-f = open( 'output.json', 'w')  
-f.write(out)  
-print(out)
 
-print("JSON saved!")
 
+createJSON()
