@@ -49,19 +49,9 @@ def createJSON():
 
     f.close()
 
-    
-    # # Open the CSV  
-    # f = open(CSV, 'rU')  
-    # # Change each fieldname to the appropriate field name. I know, so difficult.  
-    # reader = csv.DictReader( f, getHeader(CSV))  
-    # # Parse the CSV into JSON  
-    # out = json.dumps( [ row for row in reader ] )  
-    # print("JSON parsed!") 
-    # # Save the JSON  
     f = open( 'output.json', 'w')  
     out = json.dumps(finalJSON)  
     f.write(out)  
-    # print(out)
     f.close()
 # # print("JSON saved!")
 
@@ -76,7 +66,6 @@ def addDatarowToJSON(datarow, keys, jsonfile):
 
     # print(jsonfile)
     return jsonfile
-
 
 
 
