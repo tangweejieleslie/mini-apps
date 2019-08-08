@@ -1,8 +1,7 @@
 import json
 import requests
 
-sheet_names = ["", "Contents","Hero Rates Summary","Shards Drop Rates","Skin Fusion","Summon Circle Rates","Prophet Tree Summon","Prophet Tree Replacement","Brave Trial Stages","Brave Trial Chest","Wishing Fountain","Lucky Store","Hero Exp","Monsters","Player Exp","Vip","Hero Slots Cost","Tavern Quests","Tavern Quest Rerolls","CI Islands","CI Drop","CI Buildings","Seal Land","Aspen Waves","Aspen Rewards","Arena Fight Rewards","Ranking Rewards","Scout_Marauder Rates","Scout Rewards","Campaign Stages","Campaign Loot Stages","Campaign Loot Items","Campaign Event Loot","Event Raid","Tower of Oblivion","Broken Spaces","Broken Spaces Old","Guild Raid","Guild Pray for Fire","Guild Mill & Exp","Guild Tech","Guild Store","Marketplace","Seal Land Store","Arena Store","Altar Store","Loot Event Store","Glorious Relic Store","Achievments","Monthly Login Rewards","Noob Online Rewards","Enemies","Heroes","Skills"]
-
+sheet_names = ["", "Contents","HeroRatesSummary","ShardsDropRates","SkinFusion","SummonCircleRates","ProphetTreeSummon","ProphetTreeReplacement","BraveTrialStages","BraveTrialChest","WishingFountain","LuckyStore","HeroExp","Monsters","PlayerExp","Vip","HeroSlotsCost","TavernQuests","TavernQuestRerolls","CIIslands","CIDrop","CIBuildings","SealLand","AspenWaves","AspenRewards","ArenaFightRewards","RankingRewards","ScoutAndMarauderRates","ScoutRewards","CampaignStages","CampaignLootStages","CampaignLootItems","CampaignEventLoot","EventRaid","TowerofOblivion","BrokenSpaces","BrokenSpacesOld","GuildRaid","GuildPrayforFire","GuildMill&Exp","GuildTech","GuildStore","Marketplace","SealLandStore","ArenaStore","AltarStore","LootEventStore","GloriousRelicStore","Achievments","MonthlyLoginRewards","NoobOnlineRewards","Enemies","Heroes","Skills"]
 # print(sheet_names)
 
 api_url_base = 'http://gsx2json.com/api'
