@@ -1,0 +1,156 @@
+[
+    {
+        "name": "Arslan",
+        "grade": "Legendary",
+        "class": "DPS",
+        "stats":[
+            {
+                "id": 5050, // Level.Grade.Ascend
+                "level": 50,
+                "grade": 5,
+                "ascend": 0,
+                "hp": 14257,
+                "atk": 3614,
+                "pdef": 1844,
+                "mdef": 1844,
+                "atkspd": 106,
+                "acc": 0,
+                "eva": 11,
+                "crt": 84,
+                "crtpow": 0
+            },
+            {
+                "id": 6060, // Level.Grade.Ascend
+                "level": 60,
+                "grade": 6,
+                "ascend": 0,
+                "hp": 23597,
+                "atk": 5982,
+                "pdef": 3053,
+                "mdef": 3053,
+                "atkspd": 106,
+                "acc": 0,
+                "eva": 11,
+                "crt": 84,
+                "crtpow": 0
+            },
+            {
+                "id": 6061, // Level.Grade.Ascend
+                "level": 60,
+                "grade": 6,
+                "ascend": 1,
+                "hp": 25957,
+                "atk": 6580,
+                "pdef": 3358,
+                "mdef": 3358,
+                "atkspd": 106,
+                "acc": 0,
+                "eva": 11,
+                "crt": 84,
+                "crtpow": 0
+            },
+            {
+                "id": 6062, // Level.Grade.Ascend
+                "level": 60,
+                "grade": 6,
+                "ascend": 2,
+                "hp": 10000,
+                "atk": 10000,
+                "pdef": 10000,
+                "mdef": 10000,
+                "atkspd": 106,
+                "acc": 0,
+                "eva": 11,
+                "crt": 84,
+                "crtpow": 0
+            }
+        ],
+        "skills":{
+            "normal": {
+                "skill_name": "Heroic Blow",
+                "soul_cost": 0,
+                "damage_variables": [ 
+                    [150,1.1],
+                    [440,1.1],
+                    [1150,1.1],
+                    [1150,1.2],
+                    [1150,1.36],
+                    [1150,1.58]
+                ],
+                "damage_formula": "dv[level][0] + dv[level][1]*atk",
+                "damage_type": "pdmg",
+                "effects": [],
+                "target": "Front First",
+                "gem": [ "red", "red", "orange"],
+                "gem_effect": {
+                    "status": "Bleed",
+                    "chance": 0.05,
+                    "turns": 2
+                }
+            },
+            "special": {
+                "skill_name": "Fierce Cry",
+                "soul_cost": 4,
+                "damage_variables": [ 
+                    [ ],
+                    [ ],
+                    [ ],
+                    [ ],
+                    [ ],
+                    [ ]
+                ],
+                "damage_formula": "dv[level][0] + dv[level][1]*atk",
+                "damage_type": "pdmg",
+                "effects": [
+                    {
+                        "status": "Paralysis",
+                        "effect_type": "Physical",
+                        "chance": 0.50,
+                        "turns": 2
+                    },
+                    {
+                        "status": "Increase CRT rate of this attack by 20%",
+                        "effect_type": "",
+                        "chance": null,
+                        "turns": null,
+                        "value": 0.2,
+                        "conditions":[
+                            "Enemies HP lower than 50%"
+                        ]                        
+                    }
+                ],
+                "target": "All Enemies",
+                "gem": ["red", "orange", "orange"],
+                "gem_effect": {
+                    "status": "Increase user's Attack",
+                    "chance": 0.05,
+                    "turns": 1
+                }
+            },
+            "template": {
+                "skill_name": "Fierce Cry",
+                "soul_cost": 4,
+                "damage_variables": [ 
+                    [ ],
+                    [ ],
+                    [ ],
+                    [ ],
+                    [ ],
+                    [ ]
+                ],
+                "damage_formula": "dv[level][0] + dv[level][1]*atk",
+                "damage_type": "pdmg",
+                "effects": [],
+                "target": "All Enemies",
+                "gem": [],
+                "gem_effect": []
+            }
+        },
+        "passive":[
+            {
+                "effects": []
+            }
+        ]
+
+    }
+]

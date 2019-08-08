@@ -3,11 +3,11 @@ import json
   
 # https://www.guru99.com/reading-and-writing-files-in-python.html
 
-CSV = "original.csv"
-
+CSV = "ihdata.csv"
+JSONNAME = "ihdata.json"
 
 def getHeader(CSV):
-    f=open(CSV, "r")
+    f=open(CSV, "r", encoding='utf-8')
 
     f1 = f.readlines()
     headerline = f1[0]
@@ -25,6 +25,9 @@ def rowToArray(row):
         if character == "\t":       
             dataArray.append(tempword)
             tempword= ""
+        elif character == ",":
+            dataArray.append(tempword)
+            tempword= ""
         elif character == "\n":
             dataArray.append(tempword)
             tempword= ""
@@ -35,7 +38,7 @@ def rowToArray(row):
 
 # def formatJSON(datarow):
 def createJSON():
-    f=open(CSV, "r")
+    f=open(CSV, "r", encoding='utf-8')
     
     finalJSON = []
     f1 = f.readlines()
@@ -49,7 +52,7 @@ def createJSON():
 
     f.close()
 
-    f = open( 'output.json', 'w')  
+    f = open( JSONNAME, 'w')  
     out = json.dumps(finalJSON)  
     f.write(out)  
     f.close()
